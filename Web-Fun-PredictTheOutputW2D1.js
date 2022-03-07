@@ -15,13 +15,19 @@ console.log(random);
 
 // ** 2 - Dice roller
 
-function d6() {
-    var roll = Math.round(Math.random() * 6) + 1;
+function d6(max, min) {
+    // var roll = Math.round(Math.random() * 5) + 1;
+    // var roll = Math.round(Math.random() * max-1) + min;
+    var roll = Math.round(Math.random() * (max-min)) + min;
     // your code here
     return roll;
 }
     
-var playerRoll = d6();
+for(let i=0; i<101; i++){
+    var playerRoll = d6(6, 1);
+    console.log("The player rolled: " + playerRoll);
+}
+var playerRoll = d6(6, 1);
 console.log("The player rolled: " + playerRoll);
 
 // ** 3 - Random answer generator
