@@ -20,12 +20,15 @@ console.log(reverseString("creature"))
 const acronyms = (str) => {
     var newStr = "";
     for (let i=0; i<str.length; i++){
-        // Checking the first edge case
+        // Checking the first edge case (Front)
         if(str[0] != " " && newStr.length == 0){
             newStr += str[0];
         }
+        // if(str[i] =" " && str[i+1] == " "){
+        //     newStr = newStr;
+        // }
         // Adding acronyms
-        else if(str[i] == " " && str[i+1] != " "){
+        else if(str[i+1] && str[i] == " " && str[i+1] != " "){
             newStr+= str[i+1];
         }
     }
