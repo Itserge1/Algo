@@ -3,6 +3,10 @@
 // that the sub-arrays are all the same length (the array might be jagged). Don't use built-in 
 // methods like Array.prototype.flat() but feel free to use .push(value) and/or .pop() where needed.
 
+// Example:
+// arr2d = [ [2, 5, 8], [3, 6, 1], [5, 7, 7] ]
+//  Output: [2, 5, 8, 3, 6, 1, 5, 7, 7]
+
 
 
 
