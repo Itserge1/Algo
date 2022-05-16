@@ -10,18 +10,33 @@
 // if elements don't match then return false
 // if we make it through our loop and never hit false, then return true
 
-const IsPallindrome = (str) =>{
-    let NewStr ="";
-    for(let i = str.length -1; i > -1; i--){
-        NewStr += str[i];
-    }
-    if(NewStr == str){
-        return true;
-    } else{
-        return false;
-    }
-}
 
-// console.log(IsPallindrome("racecar"));
-// console.log(IsPallindrome("Dud"));
-// console.log(IsPallindrome("oho!"));
+
+// const IsPallindrome = (str) =>{
+//     let NewStr ="";
+//     for(let i = str.length -1; i > -1; i--){
+//         NewStr += str[i];
+//     }
+//     if(NewStr == str){
+//         return true;
+//     } else{
+//         return false;
+//     }
+// }
+
+function isPallindrome(str) {
+    // loop through our string
+        for ( var i = 0 ; i < str.length/2 ; i ++) {
+        // check each element with it's 'sister' element on the other side of the string
+        // if elements don't match then return false
+            if (str[i] != str[str.length - 1 - i]) {
+                return false;
+            }
+        }
+        // if we make it through our loop and never hit false, then return true
+        return true;
+    }
+
+console.log(isPallindrome("racecar"));
+console.log(isPallindrome("Dud"));
+console.log(isPallindrome("oho!"));
