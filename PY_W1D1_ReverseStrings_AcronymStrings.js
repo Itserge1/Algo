@@ -17,7 +17,7 @@ console.log(reverseString("creature"))
 // Create a function that, given a string return, the string accronym's(first Letter's only, capitalized).
 // Example: "there's no free lunch - gotta pay yer way" --> "TNFL-GPYW"
 
-const acronyms = (str) => {
+const acronym = (str) => {
     var newStr = "";
     for (let i=0; i<str.length; i++){
         // Checking the first edge case (Front)
@@ -34,4 +34,17 @@ const acronyms = (str) => {
     }
     return newStr.toUpperCase()
 }
-console.log(acronyms("there's no free lunch - gotta pay yer way"));
+
+function acronym(str) {
+    let arr=str.split(' ');
+    let newArr=[]
+    for(let i=0;i<arr.length;i++){
+        newArr.push(arr[i][0])
+    }
+    return newArr.join('').toUpperCase();
+}
+
+console.log(acronym("there's no free lunch - gotta pay yer way"));
+console.log(acronym(" there's no free lunch - gotta pay yer way "));
+console.log(acronym(" "));
+console.log(acronym(""));
