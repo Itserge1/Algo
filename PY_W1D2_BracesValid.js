@@ -56,12 +56,10 @@ const BracesValid = (str) => {
     }
 }
 
-
-
-// console.log(BracesValid("({[({})]})"));
-// console.log(BracesValid("d(i{a}l[t]o)n{e!"));
-// console.log(BracesValid("{{[a]}}(){bcd}{()}"));
-
+console.log(BracesValid("({[({})]})"));
+console.log(BracesValid("d(i{a}l[t]o)n{e!"));
+console.log(BracesValid("{{[a]}}(){bcd}{()}"));
+console.log("--------------------------");
 console.log(BracesValid("()[]{}")); //--> true
 console.log(BracesValid("(]")); // --> false
 console.log(BracesValid("()")); // --> true
