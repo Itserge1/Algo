@@ -56,10 +56,58 @@ const BracesValid = (str) => {
     }
 }
 
-console.log(BracesValid("({[({})]})"));
-console.log(BracesValid("d(i{a}l[t]o)n{e!"));
-console.log(BracesValid("{{[a]}}(){bcd}{()}"));
+console.log(BracesValid("({[({})]})")); // --> true
+console.log(BracesValid("d(i{a}l[t]o)n{e!")); // --> false
+console.log(BracesValid("{{[a]}}(){bcd}{()}")); // --> true
 console.log("--------------------------");
-console.log(BracesValid("()[]{}")); //--> true
+console.log(BracesValid("()[]{}")); // --> true
+console.log(BracesValid("(]")); // --> false
+console.log(BracesValid("()")); // --> true
+
+
+
+
+function BracesValid(str) {
+    // Cheking for if the number of opening is equal to the number of closing.
+    let count = 0;
+    // Checking for the order of opening and closing
+    let Arr = [];
+
+    for(let i=0; i<str.length; i++){
+        if(str[0] == ")" || str[0] == "}" || str[0] == "]"){
+            return false
+        }
+
+        else if(str[i] == "(" || str[i] == "{" || str[i] == "["){
+            count++;
+            Arr.push(str[i]);
+        } 
+        else if (str[i] == ")" && Arr[Arr.length - 1] == "("){
+            count--;
+            Arr.pop();
+        }
+        else if (str[i] == "}" && Arr[Arr.length-1] == "{"){
+            count--;
+            Arr.pop();
+        }
+        else if (str[i] == "]" && Arr[Arr.length - 1] == "["){
+            count--;
+            Arr.pop();
+        }
+    }
+    // console.log(count)
+    // console.log(Arr.length)
+    if (count == 0 & Arr.length == 0){
+        return true;
+    }else{
+        return false
+    }
+}
+
+console.log(BracesValid("({[({})]})")); // --> true
+console.log(BracesValid("d(i{a}l[t]o)n{e!")); // --> false
+console.log(BracesValid("{{[a]}}(){bcd}{()}")); // --> true
+console.log("--------------------------");
+console.log(BracesValid("()[]{}")); // --> true
 console.log(BracesValid("(]")); // --> false
 console.log(BracesValid("()")); // --> true
