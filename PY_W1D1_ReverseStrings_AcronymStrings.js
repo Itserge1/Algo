@@ -44,7 +44,21 @@ function acronym(str) {
     return newArr.join('').toUpperCase();
 }
 
-console.log(acronym("there's no free lunch - gotta pay yer way"));
+function acronym(str) {
+    let arr = str.split(" ")
+    // console.log(arr)
+    let newStr = ""
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] == '' || arr[i] == ' '){
+            newStr = newStr
+        }
+        else{
+            newStr += arr[i][0]
+        }
+    }
+    return newStr.toUpperCase();
+}
 console.log(acronym(" there's no free lunch - gotta pay yer way "));
+console.log(acronym("there's no free lunch - gotta pay yer way"));
 console.log(acronym(" "));
 console.log(acronym(""));
