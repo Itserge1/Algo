@@ -111,3 +111,46 @@ console.log("--------------------------");
 console.log(BracesValid("()[]{}")); // --> true
 console.log(BracesValid("(]")); // --> false
 console.log(BracesValid("()")); // --> true
+
+
+const allValid = (str) => {
+
+    str = str.split('')
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        if (str[i] !== "(" && str[i] !== "[" && str[i] !== "{" && str[i] !== ")" && str[i] !== "]" && str[i] !== "}") {
+            str.splice(i, 1);
+        };
+    };
+
+    str = str.join('')
+    console.log(str)
+
+    let map = {
+        ")": "(",
+        "]": "[",
+        "}": "{"
+    };
+
+    let stack = [];
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === "(" || str[i] === "[" || str[i] === "{") {
+            stack.push(str[i]);
+
+        } else if (stack[stack.length - 1] === map[str[i]]) {
+            stack.pop();
+
+        } else {
+            return false
+        };
+    };
+
+    if (stack.length === 0) {
+        return true
+
+    } else {
+        return false
+    };
+};
+
