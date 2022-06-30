@@ -30,6 +30,7 @@ function longestPallindrome(str) {
                 // if(isPallindrome(temp)){
                 //     console.log(temp);
                 // }
+                
 
                 if(isPallindrome(temp) && temp.length > longestPal.length){
                     longestPal = str.substring(i, j+1);
