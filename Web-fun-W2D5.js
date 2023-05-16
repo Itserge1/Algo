@@ -10,7 +10,7 @@ var theDojo = [[1, 0, 1, 1, 1, 0, 4, 0, 8, 0],
 [9, 2, 2, 2, 0, 7, 0, 1, 1, 0]];
 var dojoDiv = document.querySelector("#the-dojo");
 
-// Creates the rows of buttons for this game
+// Creates the rows of buttons for this game.
 function render(theDojo) {
     var result = "";
     for (var i = 0; i < theDojo.length; i++) {

@@ -4,9 +4,9 @@ var floor = Math.floor(1.8);
 var ceiling = Math.ceil( Math.PI );
 var random = Math.round(Math.random() * 6)
     
-console.log(floor);
-console.log(ceiling);
-console.log(random);
+// console.log(floor);
+// console.log(ceiling);
+// console.log(random);
 
 // Output
 // 1
@@ -19,16 +19,18 @@ function d6(max, min) {
     // var roll = Math.round(Math.random() * 5) + 1;
     // var roll = Math.round(Math.random() * max-1) + min;
     var roll = Math.round(Math.random() * (max-min)) + min;
+    // var roll = Math.round(Math.random() * (max) + min);
     // your code here
     return roll;
 }
-    
-for(let i=0; i<101; i++){
-    var playerRoll = d6(6, 1);
-    console.log("The player rolled: " + playerRoll);
-}
-var playerRoll = d6(6, 1);
-console.log("The player rolled: " + playerRoll);
+
+// for(let i=0; i<101; i++){
+//     var playerRoll = d6(6, 1);
+//     console.log("The player rolled: " + playerRoll);
+//     // console.log(Math.random());
+// }
+// var playerRoll = d6(6, 1);
+// console.log("The player rolled: " + playerRoll);
 
 // ** 3 - Random answer generator
 

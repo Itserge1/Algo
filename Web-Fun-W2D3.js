@@ -32,7 +32,7 @@ function pokemonIdDivisibleBy3(){
         }
     }
 }
-pokemonIdDivisibleBy3()
+// pokemonIdDivisibleBy3()
 
 // console.log the pokémon objects that have more than one type
 function pokemonTypeMoreThanOne(){
@@ -42,7 +42,7 @@ function pokemonTypeMoreThanOne(){
         }
     }
 }
-pokemonTypeMoreThanOne()
+// pokemonTypeMoreThanOne()
 
 // console.log the names of the pokémon whose only type is "poison"
 function pokemonTypePoison(){
@@ -52,7 +52,7 @@ function pokemonTypePoison(){
         }
     }
 }
-pokemonTypePoison()
+// pokemonTypePoison()
 
 // console.log the first type of all the pokémon whose second type is "flying"
 
