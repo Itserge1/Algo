@@ -69,6 +69,7 @@ const isAnagram = (s, t) => {
 //     let sortedT = t.split('').sort().join('');
 
 //     return sortedS == sortedT
+
 // }
 
 // console.log(isAnagram("cool", "loco"));
